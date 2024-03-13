@@ -2,11 +2,11 @@
 
 Woy jancok ini Bot Telegram untuk menyimpan Posting atau File yang dapat Diakses melalui Link Khusus. Saya Kira Ini Akan Bermanfaat Bagi Banyak Orang.. 😇.
 
-Jika Anda memerlukan tambahan module lagi dalam repo atau Jika Anda menemukan bug, silahkan lapor ae tot ke @ZERGIIORVDRA atau ke grup @MUTUALAN_CARI_TEMAN_VIRTUAL
+Jika Anda memerlukan tambahan module lagi dalam repo atau Jika Anda menemukan bug, silahkan lapor ae tot ke @ZERGIIORVDRA atau ke grup @cari_teman_virtualx
 
 ##
 
-**Jika Anda memerlukan tambahan module lagi dalam repo atau Jika Anda menemukan bug, silahkan report di group [@MUTUALAN_CARI_TEMAN_VIRTUAL](https://www.telegram.dog/MUTUALAN_CARI_TEMAN_VIRTUAL)**
+**Jika Anda memerlukan tambahan module lagi dalam repo atau Jika Anda menemukan bug, silahkan report di group [CARI_TEMAN_VIRTUAL](https://www.telegram.dog/CARI_TEMAN_VIRTUALX)**
 
 ### Features
 - Sepenuhnya dapat dicustom.
@@ -78,7 +78,7 @@ Jika Anda memerlukan tambahan module lagi dalam repo atau Jika Anda menemukan bu
 
 
 ## Support   
-Bergabunglah di [Group Telegram ](https://www.telegram.dog/obrolansuar) Untuk Dukungan/Bantuan Dan Join [Channel](https://www.telegram.dog/DeployBot01) untu info Update bot.   
+Bergabunglah di [Group Telegram ](https://www.telegram.dog/cari_teman_virtualx) Untuk Dukungan/Bantuan Dan Join [Channel](https://www.telegram.dog/DeployBot01) untu info Update bot.   
    
 Laporkan Bug, Berikan Permintaan Fitur Di sana.. 
 
