@@ -14,27 +14,11 @@ from helper_func import encode
 
 
 @Bot.on_message(
+@Bot.on_message(
     filters.private
     & filters.user(ADMINS)
     & ~filters.command(
-        [
-            "start",
-            "users",
-            "broadcast",
-            "ping",
-            "uptime",
-            "batch",
-            "logs",
-            "genlink",
-            "delvar",
-            "getvar",
-            "setvar",
-            "speedtest",
-            "update",
-            "stats",
-            "vars",
-            "id",
-        ]
+        ["start", "users", "broadcast", "ping", "uptime", "batch", "genlink"]
     )
 )
 async def channel_post(client: Client, message: Message):
