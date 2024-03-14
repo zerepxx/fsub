@@ -9,7 +9,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from bot import Bot
-from config import ADMINS, CHANNEL_ID, DISABLE_CHANNEL_BUTTON
+from config import ADMINS, CHANNEL_ID, DISABLE_CHANNEL_BUTTON, LOGGER
 from helper_func import encode
 
 
@@ -17,7 +17,24 @@ from helper_func import encode
     filters.private
     & filters.user(ADMINS)
     & ~filters.command(
-        ["start", "users", "broadcast", "ping", "uptime", "batch", "genlink"]
+        [
+            "start",
+            "users",
+            "broadcast",
+            "ping",
+            "uptime",
+            "batch",
+            "logs",
+            "genlink",
+            "delvar",
+            "getvar",
+            "setvar",
+            "speedtest",
+            "update",
+            "stats",
+            "vars",
+            "id",
+        ]
     )
 )
 async def channel_post(client: Client, message: Message):
@@ -27,12 +44,12 @@ async def channel_post(client: Client, message: Message):
             chat_id=client.db_channel.id, disable_notification=True
         )
     except FloodWait as e:
-        await asyncio.sleep(e.x)
+        await asyncio.sleep(e.value)
         post_message = await message.copy(
             chat_id=client.db_channel.id, disable_notification=True
         )
     except Exception as e:
-        print(e)
+        LOGGER(__name__).warning(e)
         await reply_text.edit_text("<b>Telah Terjadi Error...</b>")
         return
     converted_id = post_message.id * abs(client.db_channel.id)
@@ -57,7 +74,13 @@ async def channel_post(client: Client, message: Message):
     )
 
     if not DISABLE_CHANNEL_BUTTON:
-        await post_message.edit_reply_markup(reply_markup)
+        try:
+            await post_message.edit_reply_markup(reply_markup)
+        except FloodWait as e:
+            await asyncio.sleep(e.value)
+            await post_message.edit_reply_markup(reply_markup)
+        except Exception:
+            pass
 
 
 @Bot.on_message(filters.channel & filters.incoming & filters.chat(CHANNEL_ID))
@@ -81,5 +104,8 @@ async def new_post(client: Client, message: Message):
     )
     try:
         await message.edit_reply_markup(reply_markup)
-    except Exception as e:
-        print(e)
+    except FloodWait as e:
+        await asyncio.sleep(e.value)
+        await message.edit_reply_markup(reply_markup)
+    except Exception:
+        pass
