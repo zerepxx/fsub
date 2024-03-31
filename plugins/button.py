@@ -62,7 +62,7 @@ def fsub_button(client, message):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text="á´„á´Ê™á´€ ÊŸá´€É¢Éª",
+                        text="Coba Lagi",
                         url=f"https://t.me/{client.username}?start={message.command[1]}",
                     )
                 ]
@@ -80,7 +80,7 @@ def fsub_button(client, message):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text="á´„á´Ê™á´€ ÊŸá´€É¢Éª",
+                        text="Coba Lagi",
                         url=f"https://t.me/{client.username}?start={message.command[1]}",
                     )
                 ]
@@ -99,7 +99,7 @@ def fsub_button(client, message):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text="á´„á´Ê™á´€ ÊŸá´€É¢Éª",
+                        text="Coba Lagi",
                         url=f"https://t.me/{client.username}?start={message.command[1]}",
                     )
                 ]
