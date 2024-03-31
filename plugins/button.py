@@ -10,43 +10,43 @@ def start_button(client):
     if not FORCE_SUB_CHANNEL and not FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="â€¢ á´›á´‡É´á´›á´€É´É¢ sá´€Êá´€ â€¢", callback_data="about"),
-                InlineKeyboardButton(text="â€¢ á´›á´œá´›á´œá´˜ â€¢", callback_data="close"),
+                InlineKeyboardButton(text="Tentang Bot", callback_data="about"),
+                InlineKeyboardButton(text="Tutup", callback_data="close"),
             ],
         ]
         return buttons
     if not FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="É¢Ê€á´á´œá´˜", url=client.invitelink2),
+                InlineKeyboardButton(text="Join Group", url=client.invitelink2),
             ],
             [
-                InlineKeyboardButton(text="â€¢ á´›á´‡É´á´›á´€É´É¢ sá´€Êá´€ â€¢", callback_data="about"),
-                InlineKeyboardButton(text="â€¢ á´›á´œá´›á´œá´˜ â€¢", callback_data="close"),
+                InlineKeyboardButton(text="Tentang Bot", callback_data="about"),
+                InlineKeyboardButton(text="Tutup", callback_data="close"),
             ],
         ]
         return buttons
     if FORCE_SUB_CHANNEL and not FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="á´„Êœá´€É´É´á´‡ÊŸ", url=client.invitelink),
+                InlineKeyboardButton(text="Join Channel", url=client.invitelink),
             ],
             [
-                InlineKeyboardButton(text="â€¢ á´›á´‡É´á´›á´€É´É¢ sá´€Êá´€ â€¢", callback_data="about"),
-                InlineKeyboardButton(text="â€¢ á´›á´œá´›á´œá´˜ â€¢", callback_data="close"),
+                InlineKeyboardButton(text="Tentang Bot", callback_data="about"),
+                InlineKeyboardButton(text="Tutup", callback_data="close"),
             ],
         ]
         return buttons
     if FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="â€¢ á´›á´‡É´á´›á´€É´É¢ sá´€Êá´€ â€¢", callback_data="about"),
+                InlineKeyboardButton(text="Tentang Bot", callback_data="about"),
             ],
             [
-                InlineKeyboardButton(text="á´„Êœá´€É´É´á´‡ÊŸ", url=client.invitelink),
-                InlineKeyboardButton(text="É¢Ê€á´á´œá´˜", url=client.invitelink2),
+                InlineKeyboardButton(text="Join Channel", url=client.invitelink),
+                InlineKeyboardButton(text="Join Group", url=client.invitelink2),
             ],
-            [InlineKeyboardButton(text="â€¢ á´›á´œá´›á´œá´˜ â€¢", callback_data="close")],
+            [InlineKeyboardButton(text="Tutup", callback_data="close")],
         ]
         return buttons
 
@@ -55,7 +55,7 @@ def fsub_button(client, message):
     if not FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="á´Šá´ÉªÉ´ É¢Ê€á´á´œá´˜", url=client.invitelink2),
+                InlineKeyboardButton(text="Join Group", url=client.invitelink2),
             ],
         ]
         try:
@@ -73,7 +73,7 @@ def fsub_button(client, message):
     if FORCE_SUB_CHANNEL and not FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="á´Šá´ÉªÉ´ á´„Êœá´€É´É´á´‡ÊŸ", url=client.invitelink),
+                InlineKeyboardButton(text="Join Channel", url=client.invitelink),
             ],
         ]
         try:
@@ -91,8 +91,8 @@ def fsub_button(client, message):
     if FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
-                InlineKeyboardButton(text="á´Šá´ÉªÉ´ á´„Êœá´€É´É´á´‡ÊŸ", url=client.invitelink),
-                InlineKeyboardButton(text="á´Šá´ÉªÉ´ É¢Ê€á´á´œá´˜", url=client.invitelink2),
+                InlineKeyboardButton(text="Join Channel", url=client.invitelink),
+                InlineKeyboardButton(text="Join Group", url=client.invitelink2),
             ],
         ]
         try:
